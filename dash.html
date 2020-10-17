@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Your dashboard</title>
+ 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+ <link rel="stylesheet" type="text/css" href="style.css">
+ 
+  <!-- here we will add dashboard.js -->
+<script type="text/javascript" src="https://london.my-netdata.io/dashboard.js"></script>
+</head>
+    
+<body>
+    <div class="row">
+        <div
+             data-netdata="system.processes"
+             data-chart-library="gauge"
+             data-width="20%"
+             data-title="System Processes">
+        </div>  
+        <div
+             data-netdata="system.cpu"
+             data-width="40%"
+             data-title="Total CPU utilization">
+        </div>
+    </div>
+    <div class="row">
+        <div 
+            data-netdata="system.net"
+            data-chart-library="easypiechart"
+            data-title="Physical Network Interfaces"
+            data-width="15%">
+        </div>
+        <div
+            data-netdata="apps.lwrites"
+            data-width="40%">
+        </div>
+    </div>
+    <div class="row">
+        <div
+            data-netdata="apps.cpu"
+            data-title="Apps CPU Time">
+        </div>
+    </div>
+    <div class="row">
+        <div
+             data-netdata="apps.cpu"
+             data-chart-library="gauge"
+             data-width="20%"
+             data-title="Apps CPU Time">
+        </div>
+          <a href="#">
+              <img src="https://registry.my-netdata.io/api/v1/badge.svg?chart=apps.cpu"><br>current</a>
+          <a href="#">
+     <img src="https://registry.my-netdata.io/api/v1/badge.svg?chart=apps.cpu&after=-3600&group=max"><br>max of last hour
+  </a>
+    </div>
+ 
+</body>
+    
+</html>
